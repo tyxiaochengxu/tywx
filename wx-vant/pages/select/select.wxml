@@ -1,0 +1,61 @@
+<!--pages/select/select.wxml-->
+<view>
+  <view class="contion">
+    <!-- 轮播图 -->
+      <view class="shuffling">
+         <swiper indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{imgUrls}}">
+              <swiper-item class="swiper-img">
+                <image src="{{item}}" class="slide-image"/>
+              </swiper-item>
+            </block>
+          </swiper>
+      </view>
+      <!-- 通告栏 -->
+      <view class="notice">
+        <van-notice-bar
+          left-icon="volume-o"
+          text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。"
+        />
+      </view>
+      <!-- 公司介绍 -->
+      <view class="company">
+       <view class="company_child">
+          <view class="company_img">
+            <van-icon name="close" />
+          </view>
+          <text>企业简介</text>
+       </view>
+        <view class="company_child">
+         <view class="company_img">
+            <van-icon name="close" />
+          </view>
+          <text>企业文化</text>
+       </view>
+        <view class="company_child">
+          <view class="company_img">
+            <van-icon name="close" />
+          </view>
+          <text>企业服务</text>
+       </view>
+      </view>
+      <!-- 服务范围 -->
+      <view class="serviceScope">
+          <view class="serviceScope_header">
+            <view class="serviceScope_left">
+              服务范围
+            </view>
+            <view class="serviceScope_right">
+              More
+            </view>
+          </view>
+          <view class="serviceScope_con">
+            <view class="serviceScope_child">
+            </view>
+            <view class="serviceScope_child">
+            </view>
+          </view>
+      </view>
+  </view>
+</view>
